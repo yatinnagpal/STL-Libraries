@@ -1,0 +1,36 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    vector<int> a={5,3,28,4,2};
+    for(auto i=a.begin();i!=a.end();i++)
+    {
+        cout<<*i<<" ";
+    }
+    cout<<endl;
+    a.push_back(14);
+    a.push_back(14);
+    a.push_back(14);
+    a.push_back(14);
+    for(auto i=a.begin();i!=a.end();i++)
+    {
+        cout<<*i<<" ";
+    }
+    cout<<endl;
+    sort(a.begin(),a.end());
+    for(auto i=a.begin();i!=a.end();i++)
+    {
+        cout<<*i<<" ";
+    }
+    cout<<endl;
+    bool f=binary_search(a.begin(),a.end(),14);
+    cout<<f<<endl;
+    vector<int>::iterator it1=lower_bound(a.begin(),a.end(),14);
+    vector<int>::iterator it2=upper_bound(a.begin(),a.end(),14);
+    cout<<*it1<<" "<<*it2<<endl;
+    cout<<it2-it1;
+}
+
