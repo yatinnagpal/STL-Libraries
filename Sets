@@ -1,0 +1,31 @@
+#include<iostream>
+#include<set>
+#include<algorithm>
+using namespace std;
+bool f(int x,int y)
+{
+    return x>y;
+}
+int main()
+{
+    set<int> s;
+    s.insert(10);
+    s.insert(5);
+    s.insert(15);
+    s.insert(20);
+    s.insert(5);
+    s.insert(5);
+    for(auto x:s)
+    {
+        cout<<x<<" ";
+    }
+    cout<<endl;
+    auto it1=s.find(15);
+    if(it1==s.end())
+        cout<<"oops! Element not found\n";
+    else
+        cout<<*it1<<endl;
+    auto it2=s.lower_bound(5);
+    auto it3=s.upper_bound(5);
+    cout<<*it2<<" "<<*it3<<endl;
+}
