@@ -31,6 +31,7 @@ int main()
    marks["ritesh"]=78;
    marks["bhalla"]=60;
    marks["yatin"]=90;
+   marks.insert({{"shweta",68},{"rahul cutie",90}});
    for(auto i=marks.begin();i!=marks.end();i++)
    {
        cout<<i->first<<" "<<i->second;
